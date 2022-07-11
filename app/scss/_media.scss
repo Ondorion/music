@@ -1,0 +1,128 @@
+@media(max-width: 955px) {
+  .burger-menu {
+    display: block;
+    z-index: 7;
+
+    &.burger-menu--active {
+      &::before {
+        top: 8px;
+        transform: rotate(-45deg);
+      }
+
+      &::after {
+        transform: rotate(45deg);
+        bottom: 8px;
+      }
+
+      span {
+        display: none;
+      }
+    }
+  }
+
+  .top-header {
+    &__nav {
+      order: 1;
+    }
+  }
+
+  .header-nav-list {
+    position: fixed;
+    top: 0;
+    left: -200%;
+    display: flex;
+    transition: left .3s ease 0s;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: $mainColor;
+    z-index: 5;
+    align-items: flex-start;
+    padding: 40px 30px 20px !important;
+    row-gap: 20px;
+
+    &.header-nav-list--active {
+      left: 0;
+    }
+
+    &__link {
+      border-bottom: 1px solid transparent;
+      font-size: 22px;
+
+      &:hover {
+        border-bottom: 1px solid transparent;
+      }
+    }
+
+    &__item {
+      width: 100%;
+    }
+
+    &__link-add {
+      display: block;
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: '';
+        top: 9px;
+        right: 0;
+        background-image: url('../images/icons/arrow-right.svg');
+        width: 6px;
+        height: 12px;
+      }
+    }
+
+    &__link {
+      display: block;
+    }
+
+  }
+
+  .bottom-header {
+    &__menu {
+      position: fixed;
+      top: 0;
+      left: -200%;
+      width: 100%;
+      height: 100%;
+      transition: left .3s ease 0s;
+      background-color: $mainColor;
+      padding: 0;
+      z-index: 6;
+
+      &.bottom-header__menu--active {
+        left: 0;
+      }
+    }
+
+    &__back {
+      margin: 30px 0 0 20px;
+      color: #fff;
+      display: block;
+      border: none;
+      background-color: transparent;
+    }
+  }
+
+  .category-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px 16px 20px !important;
+    gap: 20px;
+
+    &__link {
+      padding: 0;
+      color: #fff;
+      font-size: 20px;
+    }
+
+    &__item {
+      display: block;
+    }
+
+    &__item:first-child {
+      display: none;
+    }
+  }
+}

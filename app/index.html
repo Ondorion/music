@@ -4,12 +4,273 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=!">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
+
+  <header class="header">
+    <div class="header__top top-header">
+      <div class="container top-header__container">
+        <div class="top-header__adress">
+          <span class="top-header__adress-town">Новосибирск</span>
+          <a class="top-header__adress-street" href="#">
+            ул. Октябрьская, 34
+          </a>
+        </div>
+        <div class="top-header__add">
+          <a href="tel:3832408080" class="add-header__phone">
+            (383) 240-80-80, 240-80-00
+          </a>
+          <nav class="top-header__nav">
+            <button class="burger-menu top-header__btn">
+              <span></span>
+            </button>
+            <ul class="top-header__nav-list header-nav-list">
+              <li class="header-nav-list__item">
+                <a href="" class="header-nav-list__link">Как купить</a>
+              </li>
+              <li class="header-nav-list__item">
+                <a href="" class="header-nav-list__link">Гарантия</a>
+              </li>
+              <li class="header-nav-list__item">
+                <a href="" class="header-nav-list__link">Доставка</a>
+              </li>
+              <li class="header-nav-list__item ">
+                <a href="" class="header-nav-list__link header-nav-list__link-add">Категории товаров</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="top-header__arsenal">
+            <a href="#" class="top-header__arsenal-text">
+              Мой арсенал
+            </a>
+            <img src="images/icons/b.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header__center center-header">
+      <div class="container center-header__container">
+        <a href="#" class="logo center-header__logo">
+          <img src="images/logo.png" alt="лого">
+        </a>
+        <form action="#" class="center-header__form form-header">
+          <input placeholder="Поиск товаров" type="text" class="form-header__input">
+          <button class="form-header__btn">
+            <img src="images/icons/serch.png" alt="поиск">
+          </button>
+        </form>
+        <div class="center-header__cart cart-header">
+          <a class="cart-header__link" href="#">
+            <img class="cart-header__img" src="images/icons/cart.png" alt="">
+            <p class="cart-header__text">Корзина</p>
+          </a>
+          <div class="cart-header__num">
+            <span class="">25</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header__bottom bottom-header">
+      <div class="container bottom-header__container">
+        <nav class="bottom-header__menu">
+          <button class="bottom-header__back">Назад</button>
+          <ul class="bottom-header__category category-header">
+            <li class="category-header__item">
+              <button class="category-header__link-stock category-header__link-stock--active">Акции</button>
+            </li>
+            <li class="category-header__item">
+              <button class="category-header__link">Музыкальные инструменты</button>
+              <nav class="category-header__submenu-nav submenu-nav">
+                <ul class="submenu-nav__list">
+                  <li class="submenu-nav__item submenu-nav__item--active">
+                    <button data-parent="1" class="submenu-nav__link">Гитары</button>
+                  </li>
+                  <li class="submenu-nav__item">
+                    <button data-parent="2" class="submenu-nav__link">Ударные</button>
+                  </li>
+                  <li class="submenu-nav__item">
+                    <button data-parent="3" class="submenu-nav__link">Клавишные</button>
+                  </li>
+                  <li class="submenu-nav__item">
+                    <button data-parent="4" class="submenu-nav__link">Духовые</button>
+                  </li>
+                  <li class="submenu-nav__item">
+                    <button data-parent="5" class="submenu-nav__link">Смычковые</button>
+                  </li>
+                  <li class="submenu-nav__item">
+                    <button data-parent="6" class="submenu-nav__link">Народные</button>
+                  </li>
+                </ul>
+                <div class="submenu-nav__block block-submenu-nav">
+                  <ul data-submenu="1" class="block-submenu-nav__list block-submenu-nav__list--active">
+                    <li class="block-submenu-nav__item">
+                      <a href="#" class="block-submenu-nav__link">Акустические</a>
+                    </li>
+                    <li class="block-submenu-nav__item">
+                      <a href="#" class="block-submenu-nav__link">Полуакустические</a>
+                    </li>
+                    <li class="block-submenu-nav__item">
+                      <a href="#" class="block-submenu-nav__link">Электронные</a>
+                    </li>
+                    <li class="block-submenu-nav__item">
+                      <a href="#" class="block-submenu-nav__link">Бас-гитары</a>
+                    </li>
+                  </ul>
+                  <ul data-submenu="2" class="block-submenu-nav__list">
+                    <li class="block-submenu-nav__item">
+                      <a href="#" class="block-submenu-nav__link">Тарелки</a>
+                    </li>
+                    <li class="block-submenu-nav__item">
+                      <a href="#" class="block-submenu-nav__link">Тренировочные пэды</a>
+                    </li>
+                    <li class="block-submenu-nav__item">
+                      <a href="#" class="block-submenu-nav__link">Пластики</a>
+                    </li>
+                    <li class="block-submenu-nav__item">
+                      <a href="#" class="block-submenu-nav__link">Барабанные палочки</a>
+                    </li>
+                    <li class="block-submenu-nav__item">
+                      <a href="#" class="block-submenu-nav__link">Чехлы, Кейсы, Сумки</a>
+                    </li>
+                    <li class="block-submenu-nav__item">
+                      <a href="#" class="block-submenu-nav__link">Аксессуары</a>
+                    </li>
+                    <li class="block-submenu-nav__item">
+                      <a href="#" class="block-submenu-nav__link">Перкуссия</a>
+                    </li>
+                  </ul>
+                  <ul data-submenu="3" class="block-submenu-nav__list">
+                    <li class="block-submenu-nav__item">
+                      <a href="#" class="block-submenu-nav__link">Синтезаторы</a>
+                    </li>
+                    <li class="block-submenu-nav__item">
+                      <a href="#" class="block-submenu-nav__link">Пианино</a>
+                    </li>
+                    <li class="block-submenu-nav__item">
+                      <a href="#" class="block-submenu-nav__link">Рояли</a>
+                    </li>
+                    <li class="block-submenu-nav__item">
+                      <a href="#" class="block-submenu-nav__link">Аккордеоны</a>
+                    </li>
+                  </ul>
+                  <ul data-submenu="4" class="block-submenu-nav__list">
+                    <li class="block-submenu-nav__item">
+                      <a href="#" class="block-submenu-nav__link">Труба</a>
+                    </li>
+                    <li class="block-submenu-nav__item">
+                      <a href="#" class="block-submenu-nav__link">Тромбон</a>
+                    </li>
+                    <li class="block-submenu-nav__item">
+                      <a href="#" class="block-submenu-nav__link">Туба</a>
+                    </li>
+                    <li class="block-submenu-nav__item">
+                      <a href="#" class="block-submenu-nav__link">Валторна</a>
+                    </li>
+                  </ul>
+                  <ul data-submenu="5" class="block-submenu-nav__list">
+                    <li class="block-submenu-nav__item">
+                      <a href="#" class="block-submenu-nav__link">Скрипки</a>
+                    </li>
+                    <li class="block-submenu-nav__item">
+                      <a href="#" class="block-submenu-nav__link">Выолончели</a>
+                    </li>
+                    <li class="block-submenu-nav__item">
+                      <a href="#" class="block-submenu-nav__link">Альт</a>
+                    </li>
+                  </ul>
+                  <ul data-submenu="6" class="block-submenu-nav__list">
+                    <li class="block-submenu-nav__item">
+                      <a href="#" class="block-submenu-nav__link">Гусли</a>
+                    </li>
+                    <li class="block-submenu-nav__item">
+                      <a href="#" class="block-submenu-nav__link">Балалайка</a>
+                    </li>
+                    <li class="block-submenu-nav__item">
+                      <a href="#" class="block-submenu-nav__link">Свирель</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="submenu-nav__stock stock-submenu-nav">
+                  <img class="stock-submenu-nav__img" src="images/gutar-1.png" alt="Гитара по акции">
+                  <h3 class="stock-submenu-nav__title">DBZ Halilfire</h3>
+                  <p class="stock-submenu-nav__text">
+                    Электрогитара, в стиле
+                    «Юнион Джек». Выпущена ограниченным тиражом.
+                  </p>
+                  <div class="stock-submenu-nav__prices">
+                    <span class="stock-submenu-nav__old-price">89 750</span>
+                    <span class="stock-submenu-nav__new-price">83 550 Р</span>
+                  </div>
+                </div>
+              </nav>
+            </li>
+            <li class="category-header__item">
+              <button class="category-header__link">DJ</button>
+              <nav class="category-header__submenu-nav submenu-nav">
+                <ul class="submenu-nav__list">
+                  <li class="submenu-nav__item">
+                    <a href="" class="submenu-nav__link">DJ-СТАНЦИИ</a>
+                  </li>
+                  <li class="submenu-nav__item">
+                    <a href="" class="submenu-nav__link">Микшеры</a>
+                  </li>
+                  <li class="submenu-nav__item">
+                    <a href="" class="submenu-nav__link">Контроллеры</a>
+                  </li>
+                  <li class="submenu-nav__item">
+                    <a href="" class="submenu-nav__link">Виниловые проигрыватели</a>
+                  </li>
+                </ul>
+                <div class="submenu-nav__stock stock-submenu-nav">
+                  <img class="stock-submenu-nav__img" src="images/gutar-1.png" alt="Гитара по акции">
+                  <h3 class="stock-submenu-nav__title">DBZ Halilfire</h3>
+                  <p class="stock-submenu-nav__text">
+                    Электрогитара, в стиле
+                    «Юнион Джек». Выпущена ограниченным тиражом.
+                  </p>
+                  <div class="stock-submenu-nav__prices">
+                    <span class="stock-submenu-nav__old-price">89 750</span>
+                    <span class="stock-submenu-nav__new-price">83 550 Р</span>
+                  </div>
+                </div>
+
+              </nav>
+            </li>
+            <li class="category-header__item">
+              <a href="" class="category-header__link">Шоу-техника</a>
+            </li>
+            <li class="category-header__item">
+              <a href="" class="category-header__link">Студия</a>
+            </li>
+            <li class="category-header__item">
+              <a href="" class="category-header__link">Звук</a>
+            </li>
+            <li class="category-header__item">
+              <a href="" class="category-header__link">Свет</a>
+            </li>
+            <li class="category-header__item">
+              <a href="" class="category-header__link">Коммутация</a>
+            </li>
+            <li class="category-header__item">
+              <a href="" class="category-header__link">Стойки</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+  </header>
+
+
   <main></main>
+  <script src="js/main.min.js"></script>
 </body>
 
 </html>
