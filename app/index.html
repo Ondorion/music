@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
@@ -66,8 +67,15 @@
             <img src="images/icons/serch.png" alt="поиск">
           </button>
         </form>
-        <div class="center-header__cart cart-header">
+        <div data-da=".top-header__add, 730, first" class="center-header__cart cart-header">
           <a class="cart-header__link" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25px"
+              height="22px" viewBox="0 0 24 22" version="1.1">
+              <g id="surface1">
+                <path fill="#fff" style=" stroke:none;fill-rule:nonzero;fill-opacity:1;"
+                  d="M 7.152344 8.210938 L 16.847656 8.210938 L 13.445312 1.507812 C 13.191406 1 13.382812 0.378906 13.871094 0.117188 C 14.363281 -0.144531 14.964844 0.0507812 15.222656 0.554688 L 19.101562 8.210938 L 22.667969 8.210938 C 23.402344 8.210938 24 8.863281 24 9.585938 C 24 10.386719 23.402344 10.960938 22.667969 10.960938 L 20.503906 19.914062 C 20.171875 21.140625 19.140625 22 17.917969 22 L 6.046875 22 C 4.859375 22 3.792969 21.140625 3.496094 19.914062 L 1.332031 10.960938 C 0.597656 10.960938 0 10.386719 0 9.585938 C 0 8.863281 0.597656 8.210938 1.332031 8.210938 L 4.898438 8.210938 L 8.777344 0.554688 C 9.035156 0.0507812 9.636719 -0.144531 10.128906 0.117188 C 10.617188 0.378906 10.808594 1 10.554688 1.507812 Z M 7.960938 13.023438 C 7.960938 12.679688 7.699219 12.335938 7.296875 12.335938 C 6.964844 12.335938 6.628906 12.679688 6.628906 13.023438 L 6.628906 17.148438 C 6.628906 17.566406 6.964844 17.835938 7.296875 17.835938 C 7.699219 17.835938 7.960938 17.566406 7.960938 17.148438 Z M 11.296875 13.023438 L 11.296875 17.148438 C 11.296875 17.566406 11.632812 17.835938 11.960938 17.835938 C 12.367188 17.835938 12.667969 17.566406 12.667969 17.148438 L 12.667969 13.023438 C 12.667969 12.679688 12.367188 12.335938 11.960938 12.335938 C 11.632812 12.335938 11.296875 12.679688 11.296875 13.023438 Z M 17.332031 13.023438 C 17.332031 12.679688 17.035156 12.335938 16.667969 12.335938 C 16.300781 12.335938 16 12.679688 16 13.023438 L 16 17.148438 C 16 17.566406 16.300781 17.835938 16.667969 17.835938 C 17.035156 17.835938 17.332031 17.566406 17.332031 17.148438 Z M 17.332031 13.023438 " />
+              </g>
+            </svg>
             <img class="cart-header__img" src="images/icons/cart.png" alt="">
             <p class="cart-header__text">Корзина</p>
           </a>
@@ -85,9 +93,10 @@
             <li class="category-header__item">
               <button class="category-header__link-stock category-header__link-stock--active">Акции</button>
             </li>
-            <li class="category-header__item">
+            <li class="category-header__item category-header__item-after">
               <button class="category-header__link">Музыкальные инструменты</button>
               <nav class="category-header__submenu-nav submenu-nav">
+                <button class="submenu-nav__back">Назад</button>
                 <ul class="submenu-nav__list">
                   <li class="submenu-nav__item submenu-nav__item--active">
                     <button data-parent="1" class="submenu-nav__link">Гитары</button>
@@ -211,9 +220,10 @@
                 </div>
               </nav>
             </li>
-            <li class="category-header__item">
+            <li class="category-header__item category-header__item-after">
               <button class="category-header__link">DJ</button>
               <nav class="category-header__submenu-nav submenu-nav">
+                <button class="submenu-nav__back">Назад</button>
                 <ul class="submenu-nav__list">
                   <li class="submenu-nav__item">
                     <a href="" class="submenu-nav__link">DJ-СТАНЦИИ</a>
@@ -268,8 +278,728 @@
 
   </header>
 
+  <main>
+    <div class="main-page">
+      <div class="main-page__container container">
+        <div class="main-page__slider swiper">
+          <div class="main-page__swiper swiper-wrapper">
+            <div class="main-page__slide slide-page swiper-slide">
+              <div class="slide-page__wrapper">
+                <span data-swiper-parallax="-100" class="slide-page__subtitle">
+                  Новинка
+                </span>
+                <h3 data-swiper-parallax="-150" class="slide-page__title">
+                  ARIA MAC-STD
+                </h3>
+                <p data-swiper-parallax="-200" class="slide-page__text">
+                  Станьте ближе к любимой музыке вместе с P5 Series 2. У последней версии полностью обновлена
+                  конструкция
+                  динамиков, что подняло качество звука на новый уровень, а материалы высокого качества обеспечивают
+                  комфорт.
+                </p>
+              </div>
+            </div>
+            <div class="main-page__slide slide-page swiper-slide">
+              <div class="slide-page__wrapper">
+                <span data-swiper-parallax="-100" class="slide-page__subtitle">
+                  Новинка
+                </span>
+                <h3 data-swiper-parallax="-150" class="slide-page__title">
+                  ARIA MAC-STD
+                </h3>
+                <p data-swiper-parallax="-200" class="slide-page__text">
+                  Станьте ближе к любимой музыке вместе с P5 Series 2. У последней версии полностью обновлена
+                  конструкция
+                  динамиков, что подняло качество звука на новый уровень, а материалы высокого качества обеспечивают
+                  комфорт.
+                </p>
+              </div>
+            </div>
+            <div class="main-page__slide slide-page swiper-slide">
+              <div class="slide-page__wrapper">
+                <span data-swiper-parallax="-100" class="slide-page__subtitle">
+                  Новинка
+                </span>
+                <h3 data-swiper-parallax="-150" class="slide-page__title">
+                  ARIA MAC-STD
+                </h3>
+                <p data-swiper-parallax="-200" class="slide-page__text">
+                  Станьте ближе к любимой музыке вместе с P5 Series 2. У последней версии полностью обновлена
+                  конструкция
+                  динамиков, что подняло качество звука на новый уровень, а материалы высокого качества обеспечивают
+                  комфорт.
+                </p>
+              </div>
+            </div>
+            <div class="main-page__slide slide-page swiper-slide">
+              <div class="slide-page__wrapper">
+                <span data-swiper-parallax="-100" class="slide-page__subtitle">
+                  Новинка
+                </span>
+                <h3 data-swiper-parallax="-150" class="slide-page__title">
+                  ARIA MAC-STD
+                </h3>
+                <p data-swiper-parallax="-200" class="slide-page__text">
+                  Станьте ближе к любимой музыке вместе с P5 Series 2. У последней версии полностью обновлена
+                  конструкция
+                  динамиков, что подняло качество звука на новый уровень, а материалы высокого качества обеспечивают
+                  комфорт.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="main-page__dots">
 
-  <main></main>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="marks">
+      <div class="marks__container">
+        <div class="marks__slider swiper">
+          <div class="marks__wrapper swiper-wrapper">
+            <div class="marks__slide swiper-slide">
+              <img src="images/marks/1.png" alt="Лого">
+            </div>
+            <div class="marks__slide swiper-slide">
+              <img src="images/marks/2.png" alt="Лого">
+            </div>
+            <div class="marks__slide swiper-slide">
+              <img src="images/marks/3.png" alt="Лого">
+            </div>
+            <div class="marks__slide swiper-slide">
+              <img src="images/marks/4.png" alt="Лого">
+            </div>
+            <div class="marks__slide swiper-slide">
+              <img src="images/marks/5.png" alt="Лого">
+            </div>
+            <div class="marks__slide swiper-slide">
+              <img src="images/marks/6.png" alt="Лого">
+            </div>
+            <div class="marks__slide swiper-slide">
+              <img src="images/marks/7.png" alt="Лого">
+            </div>
+            <div class="marks__slide swiper-slide">
+              <img src="images/marks/7.png" alt="Лого">
+            </div>
+            <div class="marks__slide swiper-slide">
+              <img src="images/marks/7.png" alt="Лого">
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination">
+          <span class="swiper-button-next marks-button-next">
+
+          </span>
+          <span class="swiper-button-prev marks-button-prev">
+
+          </span>
+
+        </div>
+        <div class="marks__all">
+          <a href="#" class="marks__all-link">
+            ВСЕ ПРОИЗВОДИТЕЛИ
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="sale">
+      <div class="sale__container">
+        <h2 class="sale__title">
+          Распродажа инструментов
+        </h2>
+        <div class=sale__filters-btn">
+          <button class="sale__filbtn active" value="category-a">Инструменты</button>
+          <button class="sale__filbtn" value="category-b">Свет</button>
+          <button class="sale__filbtn" value="category-c">Звук</button>
+          <button class="sale__filbtn" value="all">Уценка</button>
+        </div>
+        <div class="sale__slider swiper slider-sale">
+          <div class="slider-sale__wrapper swiper-wrapper">
+            <div data-tags="category-a" class="slider-sale__slide">
+              <div class="slider-sale__img">
+                <img src="images/sale/1.png" alt="">
+              </div>
+              <div class="slider-sale__info info-sale">
+                <h4 class="info-sale__title">
+                  Hohner Bravo III 96
+                </h4>
+                <p class="info-sale__text">
+                  Аккордеон, в стиле
+                  «Юнион Джек». Выпущен ограниченным тиражом.
+                </p>
+                <div class="info-sale__prices">
+                  <span class="info-sale__old-price">89 750</span>
+                  <span class="info-sale__new-price">83 550 Р</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services">
+      <div class="services__container">
+        <div class="services__inner">
+          <h3 class="services__title title">
+            Услуги
+          </h3>
+          <div class="services__items">
+            <div class="services__item item-services">
+              <h4 class="item-services__title item-services__title-1">
+                Доставка до дверей
+              </h4>
+              <p class="item-services__text">
+                Цикл, в том числе, выстраивает пласт. Как мы уже знаем, форшлаг регрессийно образует звукорядный хорус.
+              </p>
+            </div>
+            <div class="services__item item-services">
+              <h4 class="item-services__title item-services__title-2">
+                Установка и настройка
+              </h4>
+              <p class="item-services__text">
+                Мы осуществляем проектирование и монтаж всего спектра поставляемого оборудования на любых типах
+                объектов.
+              </p>
+            </div>
+            <div class="services__item item-services">
+              <h4 class="item-services__title item-services__title-3">
+                Продажа в кредит
+              </h4>
+              <p class="item-services__text">
+                Техника начинает лирический рок-н-ролл 50-х, благодаря употреблению микромотивов: нередко из одного
+                звука, а также двух-трех с паузами.
+              </p>
+            </div>
+            <div class="services__item item-services">
+              <h4 class="item-services__title item-services__title-4">
+                Ремонт и обслуживание
+              </h4>
+              <p class="item-services__text">
+                Явление культурологического порядка, в первом приближении, самопроизвольно. Глиссандо варьирует
+                мелодический шоу-бизнес.
+              </p>
+            </div>
+            <div class="services__item item-services">
+              <h4 class="item-services__title item-services__title-5">
+                Обмен без проблем
+              </h4>
+              <p class="item-services__text">
+                Группа Компаний LTM осуществляет проектирование и монтаж всего спектра поставляемого оборудования на
+                любых типах объектов.
+              </p>
+            </div>
+            <div class="services__item item-services">
+              <h4 class="item-services__title item-services__title-6">
+                Подарочные карты
+              </h4>
+              <p class="item-services__text">
+                Цикл, в том числе, выстраивает пласт. Как мы уже знаем, форшлаг регрессийно образует звукорядный хорус.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stock">
+      <div class="stock__container">
+        <div class="stock__inner">
+          <h4 class="stock__title title">
+            Акции
+          </h4>
+          <div class="stock__slider swiper slider-stock">
+            <div class="slider-stock__wrapper swiper-wrapper">
+              <div class="swiper-slide slider-stock__slide slide-stock-slider">
+                <div class="slide-stock-slider__img">
+                  <img src="images/stock/1.png" alt="картинка">
+                </div>
+                <div class="slide-stock-slider__info info-slide-stock">
+                  <img class="info-slide-stock__img" src="images/stock/1.png" alt="">
+                  <a href="#" class="info-slide-stock__title">
+                    Рассрочка без переплаты!
+                  </a>
+                  <p class="info-slide-stock__text">
+                    В магазинах Музыкальный Арсенал до конца 2014 года Вы можете приобрести любой товар в рассрочку на 6
+                    месяцев. 0% ПЕРЕПЛАТЫ! Первоначальный взнос 10%!
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide slider-stock__slide slide-stock-slider">
+                <div class="slide-stock-slider__img">
+                  <img src="images/stock/2.png" alt="картинка">
+                </div>
+                <div class="slide-stock-slider__info info-slide-stock">
+                  <img class="info-slide-stock__img" src="images/stock/2.png" alt="">
+                  <a href="#" class="info-slide-stock__title">
+                    Арсеналу 5 лет!
+                  </a>
+                  <p class="info-slide-stock__text">
+                    В магазинах Музыкальный Арсенал до конца 2014 года Вы можете приобрести любой товар в рассрочку на 6
+                    месяцев. 0% ПЕРЕПЛАТЫ! Первоначальный взнос 10%!
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide slider-stock__slide slide-stock-slider">
+                <div class="slide-stock-slider__img">
+                  <img src="images/stock/1.png" alt="картинка">
+                </div>
+                <div class="slide-stock-slider__info info-slide-stock">
+                  <img class="info-slide-stock__img" src="images/stock/1.png" alt="">
+                  <a href="#" class="info-slide-stock__title">
+                    Рассрочка без переплаты
+                  </a>
+                  <p class="info-slide-stock__text">
+                    В магазинах Музыкальный Арсенал до конца 2014 года Вы можете приобрести любой товар в рассрочку на 6
+                    месяцев. 0% ПЕРЕПЛАТЫ! Первоначальный взнос 10%!
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide slider-stock__slide slide-stock-slider">
+                <div class="slide-stock-slider__img">
+                  <img src="images/stock/2.png" alt="картинка">
+                </div>
+                <div class="slide-stock-slider__info info-slide-stock">
+                  <img class="info-slide-stock__img" src="images/stock/2.png" alt="">
+                  <a href="#" class="info-slide-stock__title">
+                    Арсеналу 5 лет!
+                  </a>
+                  <p class="info-slide-stock__text">
+                    В магазинах Музыкальный Арсенал до конца 2014 года Вы можете приобрести любой товар в рассрочку на 6
+                    месяцев. 0% ПЕРЕПЛАТЫ! Первоначальный взнос 10%!
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="swiper-pagination">
+            <span class="swiper-button-next stock-arrow-prev">
+
+            </span>
+            <span class="swiper-button-prev stock-arrow-next">
+
+            </span>
+
+          </div>
+          <div class="stock__links">
+            <a href="#" class="link-stock">
+              ВСЕ АКЦИИ
+            </a>
+            <a href="#" class="link-stock">
+              ПОДПИСАТЬСЯ НА АКЦИИ
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="novelties">
+      <div class="novelties__container">
+        <h3 class="novelties__title title">
+          Новинки
+        </h3>
+        <div class="novelties__slider swiper">
+          <div class="novelties__wrapper swiper-wrapper">
+            <div class="novelties__slide swiper-slide slide-novelties">
+              <a href="#">
+                <div class="slide-novelties__img">
+                  <img src="images/novelties/1.png" alt="">
+                </div>
+                <div class="slide-novelties__info">
+                  <h5 class="slide-novelties__title">
+                    Hohner Bravo III 96 RED
+                  </h5>
+                  <p class="slide-novelties__text">
+                    Аккордеон, в стиле
+                    «Юнион Джек». Выпущен ограниченным тиражом.
+                  </p>
+                  <div class="slide-novelties__prices">
+                    <span class="slide-novelties__old-price">89 750</span>
+                    <span class="slide-novelties__new-price">83 550 Р</span>
+                  </div>
+                </div>
+                <div class="slide-novelties__add add-novelties">
+                  <button class="add-novelties__btn add-novelties__btn--active">
+                    <img src="images/icons/cart-add.png" alt="">
+                  </button>
+                  <button class="add-novelties__btn">
+                    <img src="images/icons/compare-add.png" alt="">
+                  </button>
+                  <button class="add-novelties__btn">
+                    <img src="images/icons/favorite-add.png" alt="">
+                  </button>
+                </div>
+              </a>
+            </div>
+            <div class="novelties__slide swiper-slide slide-novelties">
+              <a href="#">
+                <div class="slide-novelties__img">
+                  <img src="images/novelties/2.png" alt="">
+                </div>
+                <div class="slide-novelties__info">
+                  <h5 class="slide-novelties__title">
+                    Hohner Bravo III 96 RED
+                  </h5>
+                  <p class="slide-novelties__text">
+                    Аккордеон, в стиле
+                    «Юнион Джек». Выпущен ограниченным тиражом.
+                  </p>
+                  <div class="slide-novelties__prices">
+                    <span class="slide-novelties__old-price">89 750</span>
+                    <span class="slide-novelties__new-price">83 550 Р</span>
+                  </div>
+                </div>
+                <div class="slide-novelties__add add-novelties">
+                  <button class="add-novelties__btn add-novelties__btn--active">
+                    <img src="images/icons/cart-add.png" alt="">
+                  </button>
+                  <button class="add-novelties__btn">
+                    <img src="images/icons/compare-add.png" alt="">
+                  </button>
+                  <button class="add-novelties__btn">
+                    <img src="images/icons/favorite-add.png" alt="">
+                  </button>
+                </div>
+              </a>
+            </div>
+            <div class="novelties__slide swiper-slide slide-novelties">
+              <a href="#">
+                <div class="slide-novelties__img">
+                  <img src="images/novelties/3.png" alt="">
+                </div>
+                <div class="slide-novelties__info">
+                  <h5 class="slide-novelties__title">
+                    Hohner Bravo III 96 RED
+                  </h5>
+                  <p class="slide-novelties__text">
+                    Аккордеон, в стиле
+                    «Юнион Джек». Выпущен ограниченным тиражом.
+                  </p>
+                  <div class="slide-novelties__prices">
+                    <span class="slide-novelties__old-price">89 750</span>
+                    <span class="slide-novelties__new-price">83 550 Р</span>
+                  </div>
+                </div>
+                <div class="slide-novelties__add add-novelties">
+                  <button class="add-novelties__btn add-novelties__btn--active">
+                    <img src="images/icons/cart-add.png" alt="">
+                  </button>
+                  <button class="add-novelties__btn">
+                    <img src="images/icons/compare-add.png" alt="">
+                  </button>
+                  <button class="add-novelties__btn">
+                    <img src="images/icons/favorite-add.png" alt="">
+                  </button>
+                </div>
+              </a>
+            </div>
+            <div class="novelties__slide swiper-slide slide-novelties">
+              <a href="#">
+                <div class="slide-novelties__img">
+                  <img src="images/novelties/4.png" alt="">
+                </div>
+                <div class="slide-novelties__info">
+                  <h5 class="slide-novelties__title">
+                    Hohner Bravo III 96 RED
+                  </h5>
+                  <p class="slide-novelties__text">
+                    Аккордеон, в стиле
+                    «Юнион Джек». Выпущен ограниченным тиражом.
+                  </p>
+                  <div class="slide-novelties__prices">
+                    <span class="slide-novelties__old-price">89 750</span>
+                    <span class="slide-novelties__new-price">83 550 Р</span>
+                  </div>
+                </div>
+                <div class="slide-novelties__add add-novelties">
+                  <button class="add-novelties__btn add-novelties__btn--active">
+                    <img src="images/icons/cart-add.png" alt="">
+                  </button>
+                  <button class="add-novelties__btn">
+                    <img src="images/icons/compare-add.png" alt="">
+                  </button>
+                  <button class="add-novelties__btn">
+                    <img src="images/icons/favorite-add.png" alt="">
+                  </button>
+                </div>
+              </a>
+            </div>
+            <div class="novelties__slide swiper-slide slide-novelties">
+              <a href="#">
+                <div class="slide-novelties__img">
+                  <img src="images/novelties/1.png" alt="">
+                </div>
+                <div class="slide-novelties__info">
+                  <h5 class="slide-novelties__title">
+                    Hohner Bravo III 96 RED
+                  </h5>
+                  <p class="slide-novelties__text">
+                    Аккордеон, в стиле
+                    «Юнион Джек». Выпущен ограниченным тиражом.
+                  </p>
+                  <div class="slide-novelties__prices">
+                    <span class="slide-novelties__old-price">89 750</span>
+                    <span class="slide-novelties__new-price">83 550 Р</span>
+                  </div>
+                </div>
+                <div class="slide-novelties__add add-novelties">
+                  <button class="add-novelties__btn add-novelties__btn--active">
+                    <img src="images/icons/cart-add.png" alt="">
+                  </button>
+                  <button class="add-novelties__btn">
+                    <img src="images/icons/compare-add.png" alt="">
+                  </button>
+                  <button class="add-novelties__btn">
+                    <img src="images/icons/favorite-add.png" alt="">
+                  </button>
+                </div>
+              </a>
+            </div>
+            <div class="novelties__slide swiper-slide slide-novelties">
+              <a href="#">
+                <div class="slide-novelties__img">
+                  <img src="images/novelties/2.png" alt="">
+                </div>
+                <div class="slide-novelties__info">
+                  <h5 class="slide-novelties__title">
+                    Hohner Bravo III 96 RED
+                  </h5>
+                  <p class="slide-novelties__text">
+                    Аккордеон, в стиле
+                    «Юнион Джек». Выпущен ограниченным тиражом.
+                  </p>
+                  <div class="slide-novelties__prices">
+                    <span class="slide-novelties__old-price">89 750</span>
+                    <span class="slide-novelties__new-price">83 550 Р</span>
+                  </div>
+                </div>
+                <div class="slide-novelties__add add-novelties">
+                  <button class="add-novelties__btn add-novelties__btn--active">
+                    <img src="images/icons/cart-add.png" alt="">
+                  </button>
+                  <button class="add-novelties__btn">
+                    <img src="images/icons/compare-add.png" alt="">
+                  </button>
+                  <button class="add-novelties__btn">
+                    <img src="images/icons/favorite-add.png" alt="">
+                  </button>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination">
+          <span class="swiper-button-prev novelties-arrow-prev">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="19px"
+              height="30px" viewBox="0 0 19 30" version="1.1">
+              <g id="surface1">
+                <path fill="#fff" style=" stroke:none;fill-rule:nonzero;fill-opacity:1;"
+                  d="M 13.300781 28.125 C 12.8125 28.125 12.328125 27.941406 11.957031 27.574219 L 0.558594 16.324219 C -0.183594 15.59375 -0.183594 14.40625 0.558594 13.675781 L 11.957031 2.425781 C 12.699219 1.691406 13.902344 1.691406 14.644531 2.425781 C 15.386719 3.15625 15.386719 4.34375 14.644531 5.074219 L 4.585938 15 L 14.644531 24.925781 C 15.386719 25.65625 15.386719 26.84375 14.644531 27.578125 C 14.273438 27.945312 13.785156 28.125 13.300781 28.125 Z M 13.300781 28.125 " />
+              </g>
+            </svg>
+          </span>
+          <span class="swiper-button-next novelties-arrow-next">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="19px"
+              height="30px" viewBox="0 0 19 30" version="1.1">
+              <g id="surface1">
+                <path fill="#fff" style=" stroke:none;fill-rule:nonzero;fill-opacity:1;"
+                  d="M 5.699219 28.125 C 5.214844 28.125 4.726562 27.941406 4.355469 27.574219 C 3.613281 26.84375 3.613281 25.65625 4.355469 24.925781 L 14.417969 15 L 4.355469 5.074219 C 3.613281 4.34375 3.613281 3.15625 4.355469 2.425781 C 5.097656 1.691406 6.300781 1.691406 7.042969 2.425781 L 18.445312 13.675781 C 19.1875 14.40625 19.1875 15.59375 18.445312 16.324219 L 7.042969 27.574219 C 6.671875 27.945312 6.1875 28.125 5.699219 28.125 Z M 5.699219 28.125 " />
+              </g>
+            </svg>
+          </span>
+
+        </div>
+        <div class="novelties__links">
+          <a href="#" class="link-novelties">
+            ВСЕ ПРЕДЛОЖЕНИЯ
+          </a>
+          <a href="#" class="link-novelties">
+            ПОДПИСАТЬСЯ НА РАСПРОДАЖИ
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="articles">
+      <div class="container">
+        <div class="articles__inner">
+          <div class="articles__news news-articles">
+            <h4 class="news-articles__title">
+              Новости
+            </h4>
+            <div class="news-articles__items">
+              <div class="news-articles__item item-news-articles">
+                <div class="item-news-articles__img">
+                  <img src="images/articles/1.png" alt="">
+                </div>
+                <div class="item-news-articles__info">
+                  <a href="#" class="item-news-articles__title">
+                    Мастер-класс Данила Прокопьева в Краснодаре
+                  </a>
+                  <p data-da=".item-news-articles__add-1, 480, first" class="item-news-articles__text">
+                    Мастер-класс состоится 18 октября 2014 года в 15.30 в музыкальном центре SOROKA.
+                  </p>
+                  <div data-da=".item-news-articles__add-1, 480" class="item-news-articles__data">
+                    18 июня 2014 г.
+                  </div>
+                </div>
+                <div class="item-news-articles__add-1">
+
+                </div>
+              </div>
+              <div class="news-articles__item item-news-articles">
+                <div class="item-news-articles__img">
+                  <img src="images/articles/2.png" alt="">
+                </div>
+                <div class="item-news-articles__info">
+                  <a href="#" class="item-news-articles__title">
+                    Ирина Стачинская – официальный артист Powell
+                  </a>
+                  <p data-da=".item-news-articles__add-2, 480, first" class="item-news-articles__text">
+                    С 6 лет, с момента поступления в музыкальный колледж имени Гнесиных, ее самым близким другом стала
+                    Флейта.
+                  </p>
+                  <div  data-da=".item-news-articles__add-2, 480" class="item-news-articles__data">
+                    18 июня 2014 г.
+                  </div>
+                </div>
+                <div class="item-news-articles__add-2">
+
+                </div>
+              </div>
+            </div>
+            <div class="news-articles__links">
+              <a class="links-articles" href="#">ВСЕ НОВОСТИ</a>
+              <a class="links-articles" href="#">ПОДПИСАТЬСЯ</a>
+            </div>
+
+          </div>
+          <div class="articles__reviews reviews-articles">
+            <h4 class="reviews-articles__title">
+              Обзор
+            </h4>
+            <div class="reviews-articles__items">
+              <div class="reviews-articles__item item-reviews-articles">
+                <div class="item-reviews-articles__img">
+                  <img src="images/articles/3.png" alt="">
+                </div>
+                <div class="item-reviews-articles__info">
+                  <a href="#" class="item-reviews-articles__title">
+                    Новые модели гитар Fina!
+                  </a>
+                  <p class="item-reviews-articles__text">
+                    Классическая гитара Fina FC-603 и электроакустическая гитара FR-82CEQ!
+                  </p>
+                  <div class="item-reviews-articles__data">
+                    18 июня 2014 г.
+                  </div>
+                  
+                </div>
+                
+              </div>
+              <div class="reviews-articles__item item-reviews-articles">
+                <div class="item-reviews-articles__img">
+                  <img src="images/articles/4.png" alt="">
+                </div>
+                <div class="item-reviews-articles__info">
+                  <a href="#" class="item-reviews-articles__title">
+                    Гитары Spread Music в Музыкальном Арсенале
+                  </a>
+                  <p  class="item-reviews-articles__text">
+                    В широком ассортименте товары для учащихся музыкальных школ: клавишные, духовые, струнные и ударные
+                    инструменты.
+                  </p>
+                  <div  class="item-reviews-articles__data">
+                    18 июня 2014 г.
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            <div class="reviews-articles__links">
+              <a class="links-articles" href="#">ВСЕ НОВОСТИ</a>
+              <a class="links-articles" href="#">ПОДПИСАТЬСЯ</a>
+              </В>
+            </div>
+          </div>
+        </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__info info-footer">
+          <div class="info-footer__copyright">
+             2014 Музыкальный арсенал
+          </div>
+          <a href="#" class="info-footer__rules">
+            Правила использования сайта
+          </a>
+        </div>
+        <div class="footer__contacts contacts-footer">
+          <h3 class="contacts-footer__title">
+            Магазин в Новосибирске
+          </h3>
+          <div class="contacts-footer__info info-contacts-footer">
+            <div class="info-contacts-footer__item info-contacts-footer__adress">
+              ул. Октябрьская, 34
+            </div>
+            <div class="info-contacts-footer__item info-contacts-footer__num">
+              (383) 240-80-80, 240-80-00
+            </div>
+            <div class="info-contacts-footer__item info-contacts-footer__time">
+              Сегодня с 10:00 до 19:00
+            </div>
+          </div>
+          <div class="contacts-footer__links links-footer">
+            <a href="#" class="links-footer__contact links-footer__contact-1">
+              <img src="images/footer/b.png" alt="vk">
+            </a>
+            <a href="#" class="links-footer__contact links-footer__contact-2">
+              <img src="images/footer/facebook.png" alt="facebook">
+            </a>
+            <a href="#" class="links-footer__contact links-footer__contact-3">
+              <img src="images/footer/avito.png" alt="Avito">
+            </a>
+          </div>
+        </div>
+        <div class="footer__lists lists-footer">
+          <ul class="lists-footer__about">
+            <li class="lists-footer__about-item">О компании</li>
+            <li class="lists-footer__about-item">Наша история</li>
+            <li class="lists-footer__about-item">Благодарности</li>
+            <li class="lists-footer__about-item">Партнерам</li>
+            <li class="lists-footer__about-item">Магазины</li>
+            <li class="lists-footer__about-item">Контакты</li>
+          </ul>
+          <ul class="lists-footer__about">
+            <li class="lists-footer__about-item">Эндорсеры</li>
+            <li class="lists-footer__about-item">Коллектив</li>
+            <li class="lists-footer__about-item">Вакансии</li>
+            <li class="lists-footer__about-item">Новости</li>
+            <li class="lists-footer__about-item">Обзоры</li>
+          </ul>
+          <ul class="lists-footer__about">
+            <li class="lists-footer__about-item">Акции</li>
+            <li class="lists-footer__about-item">Распродажи</li>
+            <li class="lists-footer__about-item">Товары</li>
+            <li class="lists-footer__about-item">Услуги</li>
+            <li class="lists-footer__about-item">Производители</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>
 
