@@ -79,12 +79,15 @@ stockBtn.addEventListener('click', () => {
 //Слайдер
 //1
 
-
-
 const swiper = new Swiper('.main-page__slider', {
-  speed: 400,
+  speed: 750,
   spaceBetween: 50,
   parallax: true,
+  autoplay: {
+    delay: 1000,
+    stopOnLastSlide: true,
+
+  },
   pagination: {
     el: ".main-page__dots",
   },
@@ -358,3 +361,104 @@ DynamicAdapt.prototype.arraySort = function (arr) {
 
 const da = new DynamicAdapt("max");
 da.init();
+
+// слайдер фильтр
+
+
+$(function () {
+
+  var $carousel;
+  var $slickCache;
+  var previousFilter = '';
+  var currentFilter = 'all';
+  var filtered = 'false';
+
+  $('.sale__filbtn').on('click', function (event) {
+    $(".sale__filbtn").removeClass("active");
+    $(this).addClass("active");
+    filterHandler(event.currentTarget.value);
+  });
+
+  /**
+   * Filter function for carousel
+   * @param  {String} [tag=''] filter string to be applied
+   */
+  filterHandler = function (tag) {
+    var query = '[data-tags*="' + tag + '"]';
+    var slick = $carousel[0].slick;
+
+    // Removes filter state if cache is active ( indicates a filter is applied).
+    // Work around for https://github.com/kenwheeler/slick/issues/3161
+    if (slick.$slidesCache !== null) {
+      slick.unload();
+      slick.$slideTrack.children(slick.options.slide).remove();
+      $slickCache.appendTo(slick.$slideTrack);
+      slick.reinit();
+      slick.goTo(0);
+    }
+
+    // Store a deep copy of the original carousel
+    $slickCache = slick.$slides.clone(true, true);
+
+    // Store the previous filter for reference
+    previousFilter = currentFilter;
+
+    // If the filter is being removed
+    if (tag === '' || tag === 'all') {
+
+      // Store useful properties. Log
+      filtered = false;
+      currentFilter = '';
+
+      // A filter is being applied
+    } else {
+      // Pass custom function to slick to query UI for our target
+      slick.filterSlides(function (index, element) {
+        return $(element).find(query).length > 0;
+      });
+
+      // Reset slider position
+      slick.goTo(0);
+
+      // Store useful properties.
+      filtered = true;
+      currentFilter = tag;
+    }
+
+    return currentFilter;
+  }
+
+
+
+  /*----------  Carousel Slick ----------*/
+    $carousel = $('.sale__slider').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    prevArrow: $('.slider-sale__prev'),
+    nextArrow: $('.slider-sale__next'),
+    
+    infinite: false,
+    
+    responsive: [{
+        breakpoint: 1100,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 840,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 515,
+        settings: {
+          slidesToShow: 1,
+        },
+      }
+    ],
+  });
+
+
+});
